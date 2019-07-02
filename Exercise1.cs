@@ -6,6 +6,12 @@ namespace Exercise
 {
     public class FlagPoleProblem
     {
+        /* There are flag pole with difference height align from left to right. There have a person who stand on the left side and watch the pole.
+
+        Create the program that show how many and what flag pole person seen.
+        #Note
+        The Flag pole can intercept the pole be hind if they have a same height.
+        */
         private ArrayList seenPole = null;
         private ushort eyeLevel = 0;
         private ushort[] polesTall = null;
