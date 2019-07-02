@@ -7,6 +7,10 @@ namespace Exercise
 {
     public class MathExercise
     {
+        /* 
+            Create the program that can find the Greatest Common Factor and Lowest Common Multiple
+         */
+         
         public static int GCF(int[] numbers) //Greatest Common Factor
         {
             List<int> primeList = new List<int>();

@@ -5,6 +5,20 @@ using static System.Console;
 
 namespace Exercise
 {
+    /* 
+        The game MMORPG have to send the small package.
+        We have a player status that have to pack in one int variable
+
+        Create the program that Pack and Unpack the package
+
+        #Note status
+
+        1 <= exp <= 1000000
+        1 <= Level <= 60
+        gender have a char data 'f' and 'm'
+        1 <= CharacterType <= 25
+     */
+     
     public class PackageProblem
     {
         internal struct PlayerData
