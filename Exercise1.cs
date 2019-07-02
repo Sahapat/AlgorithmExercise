@@ -10,7 +10,7 @@ namespace Exercise
 
         Create the program that show how many and what flag pole person seen.
         #Note
-        The Flag pole can intercept the pole be hind if they have a same height.
+        The Flag pole can intercept the pole behind if their height are equal.
         */
         private ArrayList seenPole = null;
         private ushort eyeLevel = 0;
