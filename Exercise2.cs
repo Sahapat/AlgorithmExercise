@@ -12,7 +12,6 @@ namespace Exercise
         Create the program that Pack and Unpack the package
 
         #Note status
-
         1 <= exp <= 1000000
         1 <= Level <= 60
         gender have a char data 'f' and 'm'
