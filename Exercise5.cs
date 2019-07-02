@@ -6,14 +6,14 @@ namespace Exercise
     class BouncingBallSimulate
     {
         /*Proposition
-        The ball fall from the high place with n height
+        The ball is falling from N height
         When it touch the floor will bounce back with 90% height
         If height < 10 cm will not bounce anymore.
 
-        Create the program that show every height point of ball when it fall from the high place till it not bounce.
-         */
+        Create the program that show every height point of ball when it fall till it not bounce.
 
-        //For this simulate i use the meter scale.
+        For this simulate i use the Meter scale.
+        */
 
         static void Simulate(float startPoint)
         {
