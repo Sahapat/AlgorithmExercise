@@ -27,9 +27,7 @@ namespace Exercise
         {
             Stack operationStack = new Stack();
             StringBuilder postfixExpression = new StringBuilder();
-
             bool focusExpression = true;
-
             foreach (var ch in equationString)
             {
                 if (ch == ' ') continue;
@@ -41,7 +39,7 @@ namespace Exercise
                         char topStack = char.Parse(operationStack.Peek().ToString());
                         if (GetPriolityByCharacter(topStack) >= GetPriolityByCharacter(ch))
                         {
-                            if(ch != '(')postfixExpression.Append(operationStack.Pop().ToString());
+                            if (ch != '(') postfixExpression.Append(operationStack.Pop().ToString());
                             operationStack.Push(ch);
                         }
                         else { operationStack.Push(ch); }
@@ -69,13 +67,9 @@ namespace Exercise
             }
             while (operationStack.Count > 0)
             {
-                while (operationStack.Count > 0)
-                {
-                    var operation = operationStack.Pop().ToString();
-                    postfixExpression.Append(operation);
-                }
+                var operation = operationStack.Pop().ToString();
+                postfixExpression.Append(operation);
             }
-            WriteLine(postfixExpression.ToString());
             return postfixExpression.ToString();
         }
         static int CalculatePostfix(int x, int y, string postfixString)
