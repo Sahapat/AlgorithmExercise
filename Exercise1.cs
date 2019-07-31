@@ -25,6 +25,7 @@ namespace Exercise
         public static void Run()
         {
             Clear();
+            /* Input getter and handle exception */
             Write("Input number of flagpole: ");
             var inputString = ReadLine();
             int numOfFlagpole = 0;
@@ -58,6 +59,8 @@ namespace Exercise
                 j++;
             }
 
+            /* Main program part (Calculate Seen pole) */
+            
             FlagPoleProblem flagpoleSolve = new FlagPoleProblem(temp);
 
             WriteLine("Number of flagpole {0}", numOfFlagpole);
