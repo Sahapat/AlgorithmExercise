@@ -40,12 +40,12 @@ namespace Exercise
                     else
                     {
                         char topStack = char.Parse(operationStack.Peek().ToString());
-                        if(GetPriolityByCharacter(topStack) >= GetPriolityByCharacter(ch))
+                        if (GetPriolityByCharacter(topStack) >= GetPriolityByCharacter(ch))
                         {
-                            postfixExpression.Append(operationStack.Pop().ToString());
+                            if(ch != '(')postfixExpression.Append(operationStack.Pop().ToString());
                             operationStack.Push(ch);
                         }
-                        else{operationStack.Push(ch);}
+                        else { operationStack.Push(ch); }
                     }
                     if (focusExpression)
                     {
@@ -58,7 +58,7 @@ namespace Exercise
                     while (operationStack.Count > 0)
                     {
                         var operation = operationStack.Pop().ToString();
-                        if(operation == "(")break;
+                        if (operation == "(") break;
                         postfixExpression.Append(operation);
                     }
                 }
@@ -142,9 +142,9 @@ namespace Exercise
         }
         static byte GetPriolityByCharacter(char ch)
         {
-            if(ch=='(')return 1;
-            else if(ch=='+'||ch=='-')return 2;
-            else if(ch =='*'|| ch=='/')return 3;
+            if (ch == '(') return 1;
+            else if (ch == '+' || ch == '-') return 2;
+            else if (ch == '*' || ch == '/') return 3;
             else return 0;
         }
     }
