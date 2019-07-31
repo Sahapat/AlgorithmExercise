@@ -28,7 +28,30 @@ namespace Exercise
     {
         public static void Run()
         {
+            Write("Input nHouse and kColor: ");
+            var inputsString = ReadLine().Split(' ');
+
+            ushort nHouse = ushort.Parse(inputsString[0]);
+            ushort kColor = ushort.Parse(inputsString[1]);
+
+            ushort[,,] houseDatas = new ushort[nHouse,kColor,1];
+
+            for(ushort i=1;i<=nHouse;i++)
+            {
+                for(ushort j=1;j<=kColor;j++)
+                {
+                    Write($"House {i} Color {j}: ");
+                    houseDatas[i-1,j-1,0] = ushort.Parse(ReadLine());
+                }
+            }
+            WriteLine("Lowest price is "+LowestPriceCalculate(houseDatas));
             Clear();
+        }
+        static ushort LowestPriceCalculate(ushort[,,] houseDatas)
+        {
+            ushort lowestPrice = ushort.MaxValue;
+            ushort[] colorsSelectedTemp = new ushort[2];
+            return 0;
         }
     }
 }
