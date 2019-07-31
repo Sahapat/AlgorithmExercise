@@ -10,7 +10,7 @@ namespace DotnetPlayground
         static void Main(string[] args)
         {
             Clear();
-            Write("1.Exercise Flagpole\n2.Exercise Packaging\n3.Exercise Colorful Village\n4.Math exercise\n5.Bouncing ball simulate\nSelect the order: ");
+            Write("1.Exercise Flagpole\n2.Exercise Packaging\n3.Exercise Colorful Village\n4.Math exercise\n5.Bouncing ball simulate\n6.Equation Solve\nSelect the order: ");
             var inputString = ReadLine();
             int orderSelected = 0;
             try
@@ -38,6 +38,9 @@ namespace DotnetPlayground
                 break;
                 case 5:
                     BouncingBallSimulate.Run();
+                break;
+                case 6:
+                    EquationSolve.Run();
                 break;
             }
             WriteLine("Program Terminate");
